@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="kbLI"
+            type="com.mycreation.astro.object_models.KnowledgeBase_model" />
+
+    </data>
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:backgroundTint="#A4B7E9"
+    android:elevation="@dimen/_10sdp"
+    app:cardCornerRadius="@dimen/_3sdp"
+    android:layout_margin="@dimen/_2sdp"
+    android:layout_height="wrap_content">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/_2sdp"
+            android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/apkName_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:hint="Apk name"
+        android:text="@{kbLI.getApkName()}"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/editorName_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:text="editor name"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/apkName_TV"
+        app:layout_constraintTop_toBottomOf="@+id/apkName_TV" />
+
+    <TextView
+        android:id="@+id/time_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="last edit"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/editorName_TV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.859"
+        app:layout_constraintStart_toEndOf="@+id/editorName_TV"
+        app:layout_constraintTop_toTopOf="@+id/editorName_TV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
+
+</layout>

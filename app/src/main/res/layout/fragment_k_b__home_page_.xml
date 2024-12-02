@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragments.KB_HomePage_Fragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textSize="@dimen/_17sdp"
+            android:text="Title here"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/title_ET"
+            android:visibility="gone"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:maxLength="30"
+            android:layout_height="wrap_content"
+            android:hint="Enter title here"
+            android:textColorHint="#403B3B"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textSize="@dimen/_17sdp"
+            android:textColor="@color/black"
+            android:background="@drawable/border_outline"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"  />
+
+        <TextView
+            android:id="@+id/content_TV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_400sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textIsSelectable="true"
+            android:clickable="false"
+            android:textSize="@dimen/_12sdp"
+            android:text="some thing goes here..."
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@drawable/border_outline"
+            android:padding="@dimen/_3sdp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/title_TV"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <EditText
+            android:id="@+id/content_ET"
+            android:visibility="gone"
+            android:hint="Enter details here"
+            android:layout_width="match_parent"
+            android:textColorHint="#403B3B"
+            android:layout_height="@dimen/_400sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:gravity="start"
+            android:textIsSelectable="true"
+            android:background="@drawable/border_outline"
+            android:padding="@dimen/_3sdp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/title_TV"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <ImageButton
+            android:id="@+id/edit_IMGBTN"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@drawable/round_mode_edit"
+            app:layout_constraintEnd_toEndOf="@+id/content_TV"
+            app:layout_constraintTop_toBottomOf="@+id/content_TV" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout_appOrRej"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/content_TV">
+
+            <ImageButton
+                android:id="@+id/submit_BTN"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:background="@drawable/round_green_done" />
+
+            <ImageButton
+                android:id="@+id/cancel_BTN"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/outline_red_cancel" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/back_img_btn"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/outline_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit_IMGBTN" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

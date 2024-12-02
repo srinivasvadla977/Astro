@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp"
+    tools:context=".fragments.NewTaskFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:textColor="@color/black"
+           android:textStyle="bold"
+           android:textSize="@dimen/_12sdp"
+           android:text="Select Type:"/>
+       
+       <RadioGroup
+           android:id="@+id/taskType"
+           android:layout_width="match_parent"
+           android:orientation="horizontal"
+           android:layout_height="wrap_content">
+
+           <RadioButton
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textColor="@color/black"
+               android:layout_marginStart="@dimen/_30sdp"
+               android:text="Only once"
+               android:id="@+id/radBtnTypeOnce"
+               tools:layout_editor_absoluteX="28dp" />
+
+           <RadioButton
+               android:layout_width="match_parent"
+               android:id="@+id/radBtnTypeRepeat"
+               android:layout_marginStart="@dimen/_3sdp"
+               android:textColor="@color/black"
+               android:layout_height="wrap_content"
+               android:text="Repeating"/>
+           
+       </RadioGroup>
+
+   </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/freqTypeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_12sdp"
+            android:text="Select Frequency:"/>
+
+        <RadioGroup
+            android:id="@+id/freqType"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily once"
+                android:id="@+id/radBtnFreqDaily"
+                tools:layout_editor_absoluteX="28dp" />
+
+            <RadioButton
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:id="@+id/radBtnFreqWeekly"
+                android:layout_height="wrap_content"
+                android:text="Weekly once"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:minWidth="@dimen/_75sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_outline"
+            android:padding="@dimen/_2sdp"
+            android:text="Select Time"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:layout_marginEnd="@dimen/_70sdp"
+            android:id="@+id/timeTV"/>
+
+        <TextView
+            android:layout_width="@dimen/_75sdp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_outline"
+            android:padding="@dimen/_2sdp"
+            android:text="Select Date"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:id="@+id/dateTV"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/impCHKB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginEnd="@dimen/_35sdp"
+            android:text="Mark as high priority"/>
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/timeZoneSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="IST" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/taskTitle"
+            android:textColor="@color/black"
+            android:textColorHint="#373434"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_4sdp"
+            android:maxLength="25"
+            android:background="@drawable/border_outline"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:hint="Enter the title here"/>
+
+        <EditText
+            android:id="@+id/taskDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="500"
+            android:maxLines="3"
+            android:textColor="@color/black"
+            android:textColorHint="#373434"
+            android:padding="@dimen/_4sdp"
+            android:background="@drawable/border_outline"
+            android:hint="Enter the description here"/>
+
+        <ImageView
+            android:id="@+id/addImg"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:src="@drawable/dummy_img_lv"
+            android:scaleType="fitCenter"
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="@dimen/_200sdp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+           <ImageButton
+               android:id="@+id/cam"
+               android:layout_width="@dimen/_32sdp"
+               android:layout_height="@dimen/_32sdp"
+               android:layout_marginEnd="@dimen/_15sdp"
+               android:background="@drawable/round_add_a_photo_24"/>
+
+            <ImageButton
+                android:id="@+id/delete"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/round_delete_forever"/>
+
+            <ImageButton
+                android:id="@+id/files"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:background="@drawable/baseline_upload_file_24"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/noteTVV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#E45858"
+            android:textSize="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_6sdp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:id="@+id/submitBtn"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+</FrameLayout>
+
+
+
+
+
+
+
