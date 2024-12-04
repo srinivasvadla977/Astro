@@ -21,8 +21,9 @@ The App auto post messages in groupChat when a user is being added/removed from 
    ii. Below that, we have a Zoomable image view where we can post images to show important notice to users, like any changes in plan or users shift plannings etc.
    iii. Below that, we have a vertical recycler view to show all scheduled tasks by users with filters like, upcoming tasks(ordered by task arrival time), daily/weekly tasks, one time tasks,
         all tasks(ordered by user scheduled time, latest first).
+        On pressing this recylcer view item, user will be taken to a new fragment with full details of that perticular item/task. 
 
-4) Scheduling new Task:
+3) Scheduling new Task:
 
    Here we can schedule a new task which can be one time task or repeating task. If it is a repeating task, we can select either daily once or weekly once so that the notification will keep coming on scheduled time.
 We can also mark the task as high priority so that the reminder will appears as an alert dialogue with background tune, even if we are using other applications at that time. The tasks which are not marked as
@@ -48,12 +49,12 @@ All the records in knowledge base are editable and they will also show the name 
    Admin portal is helpful in managing the users. It shows all the existing users and new user-requests in two separate recycler views. Here we can add new user or remove existing user
 by providing password in alert dialogue window. 
 
-8) Miscellaneous: 
+7) Miscellaneous: 
 
    In Astro, we have a switch inside toolbar which is useful in changing user status like on-shift/off-shift. Once a user status changes the other team members will receive a notification stating the same.
    
 A new user after installing this app, will not able to access all of the features. To do so, first they need to submit a request in new user page. Then Astro will auto post a message in groupChat informing
 about new user request. Then an authorized user can approve the new user request which is visible in Admin fragment by providing password.
 
-Note: I have attached screen shots of most of the above use cases in separate folder called "ScreenShorts". Please be kind to check! 
+Note: I have attached screen shots of most of the use cases with feature-number as shown here, in separate folder called "ScreenShorts". Please be kind to check! 
 
